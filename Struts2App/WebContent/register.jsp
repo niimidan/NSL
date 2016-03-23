@@ -16,14 +16,47 @@
 			</div>
 		</form>
 		
-		<table>
+		
+		<table class="table table-striped table-hover">
+		  <thead>
+		    <tr>
+		      <th>#</th>
+		      <th>First Name</th>
+		      <th>Last Name</th>
+		      <th>Email</th>
+		    </tr>
+		  </thead>
+		  <tbody>
 			<s:iterator value="userList">
-				<tr>
+				<tr align="left">
+					<th scope="row" ><s:property value="id"/></th>
 					<td><s:property value="first"/></td>
 					<td><s:property value="last"/></td>
 					<td><s:property value="email"/></td>
-					<td><s:property value="id"/></td>
 				</tr>	
 			</s:iterator>
+		</tbody>
 		</table>
+		
+		<nav>
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+		
+		
    </div> <!-- /container -->
