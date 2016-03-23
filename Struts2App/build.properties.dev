@@ -1,0 +1,4 @@
+# Properties file for ant's build.xml file
+author=Dan Johnston
+version=v1.0
+appname=Struts2App

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+   <definition name="baseLayout" template="/baseLayout.jsp">
+      <put-attribute name="title"  	value="title from tiles.xml"/>
+      <put-attribute name="header" 	value="/header.jsp"/>
+      <put-attribute name="navi"   	value="/navi.jsp"/>
+      <put-attribute name="jumbo"   value="/jumbo.jsp"/>
+      <put-attribute name="main"   	value="/main.jsp"/>
+      <put-attribute name="footer"  value="/footer.jsp"/>
+   </definition>
+   
+   
+   <definition name="MainLayout" extends="baseLayout">
+      <put-attribute name="title"  value="Welcome"/>
+   </definition>
+
+		
+   <definition name="SecureLayout" template="/secureLayout.jsp">
+      <put-attribute name="title"  	value="Logged In"/>
+      <put-attribute name="header" 	value="/header.jsp"/>
+      <put-attribute name="navi"   	value="/navi2.jsp"/>
+      <put-attribute name="main"   	value="/main.jsp"/>
+      <put-attribute name="footer"  value="/footer.jsp"/>   
+   </definition>
+   
+   
+   
+  <definition name="ErrorLayout" template="/errorLayout.jsp">
+      <put-attribute name="title"  	value="Oops..."/>
+      <put-attribute name="header" 	value="/header.jsp"/>
+      <put-attribute name="navi"   	value="/navi.jsp"/>
+      <put-attribute name="main"   	value="/error.jsp"/>
+      <put-attribute name="footer"  value="/footer.jsp"/>   
+   </definition>
+   
+   
+   <definition name="RegisterLayout" extends="SecureLayout">
+      <put-attribute name="title"  value="Register"/>
+      <put-attribute name="main"   	value="/register.jsp"/>
+   </definition>
+   
+   
+   
+   <definition name="ListLayout" extends="SecureLayout">
+      <put-attribute name="title"  value="List"/>
+      <put-attribute name="main"   	value="/listUser.jsp"/>
+   </definition>
+
+
+<!--  
+   <definition name="ProjectsLayout" extends="baseLayout">
+      <put-attribute name="title"  value="Projects"/>
+      <put-attribute name="body"   value="/projects.jsp"/>      
+   </definition>
+-->
+  
+</tiles-definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="Struts2App" default="info">
+	
+	<!-- Properties -->
+	<property file="build.properties.dev" />
+	
+	<target name="info">
+		<echo>Starting ${appname} ${version} build....</echo>
+		<echo>Ant version: ${ant.version}</echo>
+	</target>
+</project>
